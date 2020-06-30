@@ -1,5 +1,5 @@
 {
   "server": {
-    "baseDir": ["./","./src", "./supply-chain-project-ethereum/build/contracts"]
+    "baseDir": ["./","./src", "./supply-chain-project/build/contracts"]
   }
 }
