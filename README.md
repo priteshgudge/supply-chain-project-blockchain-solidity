@@ -12,6 +12,8 @@ web3 v6.4.1
 
 ## Rinkeby Deployment & Testing references
 
+[Rinkeby Contract Address](https://rinkeby.etherscan.io/address/0x2AF679d0c76489ec90170649F79142Fbd79D00E1)
+
 ``` bash
 Rinkeby Contract Address: 0x2AF679d0c76489ec90170649F79142Fbd79D00E1
 Transaction Hash: 0x6491b8364e347aa467ab468c448790a567ff20456068d03f2ef4b398555f655f
