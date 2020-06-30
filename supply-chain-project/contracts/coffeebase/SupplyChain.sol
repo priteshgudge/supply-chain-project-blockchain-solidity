@@ -355,6 +355,7 @@ contract SupplyChain {
     itemUPC = items[_upc].upc;
     productID = items[_upc].productID;
     productNotes = items[_upc].productNotes;
+    productPrice = items[_upc].productPrice;
     itemState = uint(items[_upc].itemState);
     distributorID = items[_upc].distributorID;
     retailerID = items[_upc].retailerID;
