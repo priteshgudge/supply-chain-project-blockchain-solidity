@@ -1,6 +1,6 @@
-# Supply Chain Project Ethereum Solidity 
+# Supply Chain Project Ethereum Solidity
 
-### Versions
+## Package Versions
 
 ```
 Truffle v5.1.0 (core: 5.1.0)
