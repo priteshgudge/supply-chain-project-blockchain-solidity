@@ -1,5 +1,8 @@
 # Supply Chain Project Ethereum Solidity
 
+## UML Diagrams
+[UML Diagrams File](/UML.md)
+
 ## Package Versions
 
 ```
