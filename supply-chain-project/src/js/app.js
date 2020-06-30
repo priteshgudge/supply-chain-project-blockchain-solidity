@@ -27,6 +27,7 @@ App = {
         App.sku = $("#sku").val();
         App.upc = $("#upc").val();
         App.ownerID = $("#ownerID").val();
+        App.contractOwnerID = $("#contractOwnerID").val();
         App.originFarmerID = $("#originFarmerID").val();
         App.originFarmName = $("#originFarmName").val();
         App.originFarmInformation = $("#originFarmInformation").val();
@@ -126,6 +127,7 @@ App = {
 
         App.getMetaskAccountID();
 
+
         var processId = parseInt($(event.target).data('id'));
         console.log('processId',processId);
 
@@ -160,6 +162,8 @@ App = {
             case 10:
                 return await App.fetchItemBufferTwo(event);
                 break;
+            case 15:
+                return await App.setRoles();
             }
     },
 
@@ -335,7 +339,37 @@ App = {
           console.log(err.message);
         });
         
+    },
+    setRoles: function () {
+        if (typeof App.contracts.SupplyChain.currentProvider.sendAsync !== "function") {
+            App.contracts.SupplyChain.currentProvider.sendAsync = function () {
+                return App.contracts.SupplyChain.currentProvider.send.apply(
+                App.contracts.SupplyChain.currentProvider,
+                    arguments
+              );
+            };
+        }
+
+        App.contracts.SupplyChain.deployed().then(function(instance) {
+        // var events = instance.allEvents(function(err, log){
+        //   if (!err)
+        //     $("#ftc-events").append('<li>' + log.event + ' - ' + log.transactionHash + '</li>');
+        // });
+        
+        //App.readForm();
+        instance.addFarmer(App.originFarmerID, {from: App.contractOwnerID});
+        instance.addDistributor(App.distributorID, {from: App.contractOwnerID});
+        instance.addRetailer(App.retailerID, {from: App.contractOwnerID});
+        instance.addConsumer(App.consumerID, {from: App.contractOwnerID});
+
+        console.log("Set Updated Roles.")
+
+        }).catch(function(err) {
+          console.log(err.message);
+        });
+        
     }
+
 };
 
 $(function () {
