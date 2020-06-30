@@ -8,8 +8,8 @@ contract ConsumerRole {
   using Roles for Roles.Role;
 
   // Define 2 events, one for Adding, and other for Removing
-  event ConsumerAdded(address indexed consumerAddress);
-  event ConsumerRemoved(address indexed consumerAddress);
+  event ConsumerAdded(address indexed account);
+  event ConsumerRemoved(address indexed account);
 
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
   Roles.Role private consumers;
@@ -42,13 +42,13 @@ contract ConsumerRole {
 
   // Define an internal function '_addConsumer' to add this role, called by 'addConsumer'
   function _addConsumer(address account) internal {
-    consumers.add(address);
+    consumers.add(account);
     emit ConsumerAdded(account);
   }
 
   // Define an internal function '_removeConsumer' to remove this role, called by 'removeConsumer'
   function _removeConsumer(address account) internal {
-    consumers.remove(address);
-    emit ConsumerRemoved(msg.sender);
+    consumers.remove(account);
+    emit ConsumerRemoved(account);
   }
 }
