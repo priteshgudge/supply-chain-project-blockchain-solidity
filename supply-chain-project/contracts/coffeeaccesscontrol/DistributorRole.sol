@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -27,12 +27,12 @@ contract DistributorRole {
 
   // Define a function 'isDistributor' to check this role
   function isDistributor(address account) public view returns (bool) {
-    return distributors.has(address);
+    return distributors.has(account);
   }
 
   // Define a function 'addDistributor' that adds this role
   function addDistributor(address account) public onlyDistributor {
-      _addDistributor(msg.sender);
+      _addDistributor(account);
   }
 
   // Define a function 'renounceDistributor' to renounce this role
