@@ -12,7 +12,7 @@ web3 v6.4.1
 
 ## Rinkeby Deployment & Testing references
 
-[Rinkeby Contract Address](https://rinkeby.etherscan.io/address/0x2AF679d0c76489ec90170649F79142Fbd79D00E1)
+[Rinkeby Contract Etherscan Link](https://rinkeby.etherscan.io/address/0x2AF679d0c76489ec90170649F79142Fbd79D00E1)
 
 ``` bash
 Rinkeby Contract Address: 0x2AF679d0c76489ec90170649F79142Fbd79D00E1
