@@ -14,4 +14,4 @@
 
 ## Class UML Diagram
 
-![Class UML](/images/4_state_uml.png)
+![Class UML](/images/4_class_uml.png)
